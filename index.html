@@ -13,8 +13,8 @@ html {
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: radial-gradient(circle at top, #0f0f0f, #000);
-    color: white;
+    background: #ffffff;
+    color: #111;
 }
 
 /* NAVBAR */
@@ -22,15 +22,16 @@ nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(20,20,20,0.6);
-    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(10px);
     padding: 15px;
     text-align: center;
     z-index: 1000;
+    border-bottom: 1px solid #ddd;
 }
 
 nav a {
-    color: white;
+    color: #111;
     margin: 0 15px;
     text-decoration: none;
     font-weight: bold;
@@ -38,8 +39,8 @@ nav a {
 }
 
 nav a:hover {
-    color: #00ffcc;
-    text-shadow: 0 0 15px #00ffcc;
+    color: #4da6ff;
+    text-shadow: 0 0 10px #4da6ff;
 }
 
 /* HEADER */
@@ -54,19 +55,18 @@ header {
 
 header h1 {
     font-size: 70px;
-    background: linear-gradient(90deg, #00ffcc, #00ff88);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #111;
 }
 
 header p {
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
 /* BUTTON */
 button {
     padding: 12px 25px;
-    background: linear-gradient(90deg, #00ffcc, #00ff88);
+    background: #4da6ff;
+    color: white;
     border: none;
     border-radius: 10px;
     cursor: pointer;
@@ -76,7 +76,7 @@ button {
 
 button:hover {
     transform: scale(1.08);
-    box-shadow: 0 0 25px #00ffcc;
+    box-shadow: 0 0 15px rgba(77,166,255,0.6);
 }
 
 /* SECTIONS */
@@ -96,23 +96,24 @@ section {
 
 /* CARD */
 .card {
-    background: rgba(255,255,255,0.05);
-    backdrop-filter: blur(10px);
+    background: #f9f9f9;
     padding: 20px;
     border-radius: 15px;
     transition: 0.3s;
+    border: 1px solid #eee;
 }
 
 .card:hover {
     transform: translateY(-10px) scale(1.03);
-    box-shadow: 0 0 30px #00ffcc;
+    box-shadow: 0 0 20px rgba(77,166,255,0.3);
+    border-color: #4da6ff;
 }
 
 /* CART */
 #cartItems div {
     margin: 10px auto;
     padding: 10px;
-    background: #111;
+    background: #f2f2f2;
     border-radius: 10px;
     max-width: 400px;
 }
@@ -120,16 +121,16 @@ section {
 /* FOOTER */
 footer {
     padding: 20px;
-    background: #111;
+    background: #f5f5f5;
     text-align: center;
-    opacity: 0.6;
+    opacity: 0.7;
+    border-top: 1px solid #ddd;
 }
 </style>
 </head>
 
 <body>
 
-<!-- NAV -->
 <nav>
     <a href="#home">Home</a>
     <a href="#kits">Kits</a>
@@ -137,14 +138,12 @@ footer {
     <a href="#kontakt">Kontakt</a>
 </nav>
 
-<!-- HEADER -->
 <header id="home">
     <h1>AIDZBIKES</h1>
     <p>Custom E-Bike Kits mit 3D-Design</p>
     <button onclick="document.getElementById('kits').scrollIntoView()">Kits ansehen</button>
 </header>
 
-<!-- KITS -->
 <section id="kits">
     <h2>🚲 Unsere Kits</h2>
 
@@ -171,7 +170,6 @@ footer {
     </div>
 </section>
 
-<!-- CART -->
 <section id="cart">
     <h2>🛒 Warenkorb</h2>
 
@@ -182,13 +180,11 @@ footer {
     <button onclick="checkout()">Bestellung anfragen</button>
 </section>
 
-<!-- KONTAKT -->
 <section id="kontakt">
     <h2>📩 Kontakt</h2>
     <p>aidzbikes@gmail.com</p>
 </section>
 
-<!-- FOOTER -->
 <footer>
     © 2026 AIDZBIKES
 </footer>
@@ -225,7 +221,7 @@ function checkout() {
         return;
     }
 
-    alert("Anfrage gesendet! Wir melden uns per Mail 🚲🔥");
+    alert("Anfrage gesendet! Wir melden uns per Mail 🚲");
 }
 
 </script>
